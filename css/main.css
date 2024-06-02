@@ -1948,10 +1948,12 @@ h3 {
   border-radius: 10px;
   overflow: hidden;
 }
-.video-section .video-container::before {
-  content: "";
-  display: block;
-  padding-top: 75.78%;
+.video-section .video-container video {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 10px;
 }
 .video-section .thumbnail {
   position: absolute;
@@ -1963,10 +1965,14 @@ h3 {
   align-items: center;
   cursor: pointer;
   z-index: 2;
+  inset: 0px;
 }
 .video-section .thumbnail img {
   max-width: 100%;
   max-height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  height: 100%;
 }
 .video-section .play-button {
   position: absolute;
@@ -1975,20 +1981,6 @@ h3 {
   background: url("../img/play-btn.webp") no-repeat center center;
   background-size: contain;
   cursor: pointer;
-}
-.video-section .video {
-  width: 100%;
-  height: 100%;
-  border-radius: 10px;
-}
-.video-section .video-container video {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover; /* Ensures the video covers the container */
 }
 .video-section .btnplace {
   align-items: center;
@@ -1999,6 +1991,49 @@ h3 {
   color: #000;
 }
 
+@media screen and (max-width: 1024px) {
+  .video-section h2 {
+    font-size: 48px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .mobile-aspect::before {
+    content: "";
+    display: block;
+    padding-top: 74.78%;
+  }
+  .mobile-aspect video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+  }
+  .video-section {
+    padding: 20px 0px;
+  }
+  .video-section h2 {
+    font-size: 36px;
+    line-height: normal;
+  }
+  .video-section .btnplace p {
+    font-size: 14px;
+  }
+  .video-section .primary-button {
+    font-size: 16px;
+    max-width: 216px;
+    min-height: 35px;
+    border-radius: 7px;
+  }
+  .video-section .play-button {
+    width: 45px;
+    height: 45px;
+  }
+}
+@media screen and (max-width: 375px) {
+  .video-section h2 {
+    font-size: 32px;
+  }
+}
 .testimonials {
   background: var(--dark-blue-gradiente, linear-gradient(180deg, #041b2f 0%, #003360 100%));
   padding: 80px 0px;
@@ -2037,6 +2072,53 @@ h3 {
   z-index: 2;
 }
 
+@media screen and (max-width: 1024px) {
+  .testimonials h2 {
+    font-size: 48px;
+  }
+  .testimonial-slider {
+    padding: 0px 50px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .testimonials {
+    padding: 40px 0px;
+  }
+  .testimonials h2 {
+    font-size: 36px;
+    line-height: normal;
+  }
+  .testimonials .btnplace p {
+    font-size: 14px;
+  }
+  .testimonials .primary-button {
+    font-size: 16px;
+    max-width: 216px;
+    min-height: 35px;
+    border-radius: 7px;
+  }
+  .testimonials .slick-arrow {
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}
+@media screen and (max-width: 425px) {
+  .slick-arrow svg {
+    max-width: 23px;
+    max-height: 23px;
+  }
+  .testimonial-slider {
+    padding: 0px 30px;
+  }
+  .btnplace {
+    padding-top: 20px;
+  }
+}
+@media screen and (max-width: 375px) {
+  .testimonials h2 {
+    font-size: 32px;
+  }
+}
 .faq-section .wrapper {
   padding-top: 72px;
   padding-bottom: 80px;
@@ -2112,11 +2194,11 @@ h3 {
 
 @media screen and (max-width: 768px) {
   .faq-section .wrapper {
-    padding-top: 49px;
-    padding-bottom: 48px;
+    padding-top: 40px;
+    padding-bottom: 40px;
   }
   .faq-section h2 {
-    margin-bottom: 32px;
+    margin-bottom: 36px;
   }
   .faq-section .questions .qa-item {
     padding: 18px 15px;
@@ -2189,4 +2271,35 @@ footer .footer-text {
   display: flex;
   align-items: center;
   gap: 9px;
+}
+
+@media screen and (max-width: 768px) {
+  .footer-partners {
+    justify-content: center;
+  }
+  .footer-partners img {
+    max-height: 90px;
+    max-width: 155px;
+  }
+  .footer-text {
+    font-size: 14px;
+    text-align: center;
+  }
+  footer .soc-m {
+    gap: 12px;
+  }
+  footer .soc-m a svg {
+    max-width: 42px;
+    max-height: 42px;
+  }
+  .footer-logo {
+    max-width: 90px;
+  }
+  footer {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+  footer .wrapper {
+    gap: 20px;
+  }
 }/*# sourceMappingURL=main.css.map */

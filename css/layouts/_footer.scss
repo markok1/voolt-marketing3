@@ -54,3 +54,36 @@ footer {
   align-items: center;
   gap: 9px;
 }
+
+@media screen and (max-width: 768px) {
+  .footer-partners {
+    justify-content: center;
+    img {
+      max-height: 90px;
+      max-width: 155px;
+    }
+  }
+  .footer-text {
+    font-size: 14px;
+    text-align: center;
+  }
+  footer .soc-m {
+    gap: 12px;
+    a {
+      svg {
+        max-width: 42px;
+        max-height: 42px;
+      }
+    }
+  }
+  .footer-logo {
+    max-width: 90px;
+  }
+  footer {
+    padding-top: 40px;
+    padding-bottom: 40px;
+    .wrapper {
+      gap: 20px;
+    }
+  }
+}

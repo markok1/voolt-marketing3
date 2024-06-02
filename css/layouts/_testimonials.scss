@@ -37,3 +37,55 @@
     z-index: 2;
   }
 }
+
+@media screen and (max-width: 1024px) {
+  .testimonials h2 {
+    font-size: 48px;
+  }
+  .testimonial-slider {
+    padding: 0px 50px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .testimonials {
+    padding: 40px 0px;
+    h2 {
+      font-size: 36px;
+      line-height: normal;
+    }
+    .btnplace p {
+      font-size: 14px;
+    }
+    .primary-button {
+      font-size: 16px;
+      max-width: 216px;
+      min-height: 35px;
+      border-radius: 7px;
+    }
+  }
+  .testimonials .slick-arrow {
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}
+@media screen and (max-width: 425px) {
+  .slick-arrow {
+    svg {
+      max-width: 23px;
+      max-height: 23px;
+    }
+  }
+  .testimonial-slider {
+    padding: 0px 30px;
+  }
+  .btnplace {
+    padding-top: 20px;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .testimonials h2 {
+    font-size: 32px;
+  }
+}

@@ -3,7 +3,7 @@ $(document).ready(function () {
     dots: false,
     arrows: false,
     infinite: true,
-    speed: 300,
+    speed: 700,
     autoplay: true,
     autoplaySpeed: 1500,
     pauseOnHover: false,
@@ -112,16 +112,19 @@ $(document).ready(function () {
     }
   })(jQuery);
 
-  const playButton = document.getElementById("play-button");
-  const thumbnail = document.getElementById("thumbnail");
-  const videos = document.querySelectorAll(".video");
+  //video
+  const $thumbnail = $("#thumbnail");
 
-  playButton.addEventListener("click", function () {
-    thumbnail.style.display = "none";
-    videos.forEach((video) => {
-      video.style.display = "block";
-      video.play();
-    });
+  $("#thumbnail").click(function () {
+    const viewportWidth = $(window).width();
+
+    if (viewportWidth >= 768) {
+      $(".video-dekstop").css("display", "block").get(0).play();
+      $thumbnail.hide();
+    } else {
+      $(".video-mobile").css("display", "block").get(0).play();
+      $thumbnail.hide();
+    }
   });
 
   $(".testimonial-holder").slick({
@@ -130,7 +133,7 @@ $(document).ready(function () {
     infinite: true,
     speed: 2000,
     slidesToShow: 1,
-    autoplay: true,
+    autoplay: false,
     swipe: true,
     autoplaySpeed: 2000,
     pauseOnHover: false,
