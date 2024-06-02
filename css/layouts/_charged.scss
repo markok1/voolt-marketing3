@@ -1,0 +1,95 @@
+.charged {
+  padding: 80px 0px;
+  background: var(--dark-blue-gradiente, linear-gradient(180deg, #041b2f 0%, #003360 100%));
+  h2 {
+    line-height: normal;
+    color: #f7f7ff;
+    text-align: center;
+    margin-bottom: 40px;
+  }
+}
+
+.gif-holder {
+  display: flex;
+  justify-content: center;
+  gap: 35px;
+  flex-wrap: wrap;
+}
+.gif-box {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  img {
+    max-width: 300px;
+    max-height: 400px;
+    border-radius: 10px;
+  }
+}
+.gif-top {
+  display: flex;
+  gap: 8px;
+  .number {
+    width: 45px;
+    height: 45px;
+    background-color: #058beb;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+
+    color: #fff;
+    font-family: $genralsans;
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 22px;
+
+    flex-shrink: 0;
+  }
+  p {
+    color: #fff;
+    max-width: 267px;
+    span {
+      font-weight: 700;
+    }
+  }
+}
+.gif-arrow {
+  position: absolute;
+  left: -22px;
+  bottom: 44px;
+}
+.gif-step3 {
+  bottom: 160px;
+}
+
+@media screen and (max-width: 1024px) {
+  .charged {
+    h2 {
+      font-size: 48px;
+    }
+  }
+  .gif-box {
+    align-items: center;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .charged {
+    padding: 40px 0px;
+    h2 {
+      font-size: 36px;
+      line-height: normal;
+    }
+  }
+}
+@media screen and (max-width: 425px) {
+  .gif-holder {
+    gap: 20px;
+  }
+  .gif-box img {
+    max-width: 262px;
+  }
+}

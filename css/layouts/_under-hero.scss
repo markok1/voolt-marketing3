@@ -1,0 +1,52 @@
+.under-hero {
+  background: #f4f5fb;
+  padding: 34px 0px;
+}
+.checkmarks-holder {
+  display: flex;
+  justify-content: space-around;
+}
+.checkmark-box {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  p {
+    color: #202122;
+    font-family: $genralsans;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+}
+
+@media screen and (max-width: 1260px) {
+  .checkmarks-holder {
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+  }
+  .checkmark-box p {
+    font-size: 16px;
+  }
+  .checkmark-box {
+    gap: 8px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .under-hero {
+    padding: 20px 0px;
+  }
+  .checkmark-box {
+    gap: 4px;
+    svg {
+      max-width: 13px;
+      max-height: 13px;
+      flex-shrink: 0;
+    }
+  }
+  .checkmark-box p {
+    font-size: 12px;
+  }
+}

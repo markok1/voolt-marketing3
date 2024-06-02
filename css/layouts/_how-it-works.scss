@@ -1,0 +1,236 @@
+.how-it-works {
+  padding: 80px 0px;
+  h2 {
+    color: #202122;
+    text-align: center;
+    font-family: $genralsans;
+    font-size: 60px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+  }
+  .subtitle {
+    color: #202122;
+    text-align: center;
+    font-family: $genralsans;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+}
+.slide-box {
+  position: relative;
+  .number {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    background-color: #058beb;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+
+    color: #f7f7ff;
+    font-family: $genralsans;
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+  }
+  .bottom-message {
+    border-radius: 3px;
+    background: #f4f5fb;
+    padding: 16px;
+    // max-width: 208px;
+
+    position: absolute;
+    left: 50%;
+    bottom: -50px;
+    transform: translateX(-50%);
+
+    transition: all 0.25s ease-in;
+    p {
+      color: #202122;
+      font-family: $genralsans;
+      font-size: 15.075px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+      span {
+        color: #058beb;
+        font-weight: 700;
+      }
+    }
+  }
+}
+
+.how-marketing-holder {
+  width: 100%;
+  .slide-box {
+    max-width: 590px;
+    max-height: 330px;
+    margin: auto;
+  }
+  .slick-slider {
+    margin-left: -12%;
+    margin-right: -12%;
+  }
+
+  .slick-list {
+    padding-top: 40px !important;
+    height: 455px;
+    max-width: 100%;
+    width: 100%;
+    margin: auto;
+  }
+
+  .slick-track {
+    max-width: 100% !important;
+    transform: translate3d(0, 0, 0) !important;
+    perspective: 100px;
+  }
+
+  .slick-slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    opacity: 0;
+    width: 100% !important;
+    transform: translate3d(0, 0, 0);
+    transition: transform 1s, margin 1s, opacity 1s;
+  }
+
+  .slick-snext,
+  .slick-sprev {
+    display: block;
+  }
+
+  .slick-current {
+    opacity: 1;
+    position: relative;
+    display: block;
+    transform: translate3d(0, 0, 0);
+    z-index: 2;
+  }
+
+  .slick-snext {
+    opacity: 0.4;
+    transform: translate3d(30%, 0, -20px);
+    z-index: 1;
+  }
+
+  .slick-sprev {
+    opacity: 0.4;
+    transform: translate3d(-30%, 0, -20px);
+  }
+}
+
+.how-marketing-holder {
+  .slick-dots {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    li {
+      button {
+        border-radius: 50%;
+        font-size: 0px;
+        width: 15px;
+        height: 15px;
+        background-color: #d9d9d9;
+        border: 0px;
+      }
+    }
+    .slick-active {
+      button {
+        background-color: #727272;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .how-it-works {
+    h2 {
+      font-size: 48px;
+    }
+    .subtitle {
+      font-size: 30px;
+    }
+  }
+  .how-marketing-holder {
+    .slick-list {
+      padding: 40px 40px 30px 40px !important;
+      height: unset;
+    }
+    .slide-box {
+      max-width: 476px;
+      .bottom-message {
+        bottom: -5px;
+        p {
+          font-size: 14px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .how-marketing-holder .slide-box {
+    max-height: unset;
+    max-width: fit-content;
+  }
+  .how-marketing-holder .slick-sprev {
+    transform: unset;
+    opacity: 0;
+  }
+  .how-marketing-holder .slick-snext {
+    transform: unset;
+    opacity: 0;
+  }
+  .how-marketing-holder .slide-box .bottom-message {
+    max-width: 190px;
+    width: 100%;
+    bottom: 55px;
+  }
+  .how-marketing-holder .slide-box .big-message {
+    max-width: 240px;
+  }
+
+  .how-marketing-holder .slick-list {
+    padding: 20px 0px 0px 0px !important;
+  }
+  .how-marketing-holder .slick-dots {
+    position: absolute;
+    bottom: 8px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .how-it-works {
+    padding: 40px 0px;
+    h2 {
+      font-size: 36px;
+      line-height: 40px;
+      margin-bottom: 8px;
+    }
+    .subtitle {
+      font-size: 24px;
+    }
+  }
+  .slide-box .number {
+    left: 10px;
+  }
+}
+@media screen and (max-width: 375px) {
+  .how-it-works h2 {
+    font-size: 31px;
+  }
+  .how-it-works .subtitle {
+    font-size: 22px;
+  }
+}

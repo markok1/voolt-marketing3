@@ -1,0 +1,99 @@
+.track-leads {
+  padding: 116px 0px;
+  background: var(--dark-blue-gradiente, linear-gradient(180deg, #041b2f 0%, #003360 100%));
+  position: relative;
+  overflow: hidden;
+}
+
+.track-content {
+  max-width: 688px;
+  padding-left: 113px;
+  h2 {
+    color: #f7f7ff;
+    line-height: 64px;
+    margin-bottom: 40px;
+    max-width: 560px;
+  }
+  p {
+    color: #f7f7ff;
+    max-width: 574px;
+    margin-bottom: 40px;
+  }
+  .images {
+    position: absolute;
+    bottom: -121px;
+    right: calc(50% - 1153px);
+    max-width: 1062px;
+  }
+}
+
+@media screen and (max-width: 1440px) {
+  .track-content {
+    padding-left: 0px;
+    max-width: calc(50% - 20px);
+  }
+  .track-content .images {
+    position: absolute;
+    bottom: 50%;
+    right: 0px;
+    max-width: calc(50% - 20px);
+    transform: translateY(50%);
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .track-leads {
+    padding: 80px 0px;
+  }
+  .track-content {
+    h2 {
+      font-size: 36px;
+      line-height: 38px;
+    }
+    .text-xl {
+      font-size: 20px;
+      line-height: 24px;
+    }
+    .primary-button {
+      font-size: 16px;
+      max-width: 216px;
+      min-height: 35px;
+      border-radius: 7px;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .track-leads {
+    padding: 40px 0px;
+  }
+  .track-content {
+    max-width: 100%;
+    text-align: center;
+    h2 {
+      margin: auto;
+      margin-bottom: 20px;
+    }
+    .text-xl {
+      margin: auto;
+      margin-bottom: 20px;
+    }
+    .primary-button {
+      margin: auto;
+    }
+    .images {
+      position: relative;
+      bottom: unset;
+      right: unset;
+      max-width: 100%;
+      transform: unset;
+      margin-bottom: 20px;
+    }
+  }
+}
+@media screen and (max-width: 375px) {
+  .track-content h2 {
+    font-size: 34px;
+    line-height: 37px;
+  }
+}

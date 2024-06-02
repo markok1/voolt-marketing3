@@ -1,0 +1,23 @@
+$genralsans: "General Sans", sans-serif;
+$carmensans: "Carmen Sans", sans-serif;
+
+:root {
+  // Colors
+  --color-blue: #0594fa;
+  --color-dark-blue: #3454da;
+  --color-yellow: #ffd20a;
+  --color-light-black: #242424;
+  --color-black: #202122;
+  --color-white: #fff;
+  --color-gray: #d9d9d9;
+  --color-gray-bg: #f4f5fb;
+  --color-gray-border: #e9e9e9;
+
+  --gradient-direction2: 112deg;
+  --gradient-blue1: #0c356a;
+  --gradient-blue2: #2d6dbf;
+  --gradiente-azul: linear-gradient(var(--gradient-direction2), var(--gradient-blue1), var(--gradient-blue2));
+  --gradient-dark-blue1: #041b2f;
+  --gradient-dark-blue2: #003360;
+  --dark-blue-gradiente: linear-gradient(180deg, #041b2f 0%, #003360 100%);
+}

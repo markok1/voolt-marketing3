@@ -1,0 +1,30 @@
+.navbar {
+  padding: 13px 0px;
+  .logo {
+    svg {
+      width: 123px;
+    }
+  }
+}
+@media screen and (max-width: 768px) {
+  .navbar {
+    .primary-button {
+      font-size: 15px;
+      font-weight: 500;
+    }
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .navbar {
+    padding: 11px 0px;
+    .logo {
+      max-width: 90px;
+    }
+    .primary-button {
+      font-size: 12px;
+      min-height: 30px;
+      max-width: 177px;
+    }
+  }
+}

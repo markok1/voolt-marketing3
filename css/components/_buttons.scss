@@ -1,0 +1,48 @@
+.primary-button {
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  max-width: 340px;
+  width: 100%;
+
+  gap: 10px;
+
+  border-radius: 10px;
+  background: var(--color-yellow, #ffd20a);
+  box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.1);
+  transition: all 0.25s ease-in;
+
+  color: #112c8d;
+
+  font-family: $genralsans;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  &:hover {
+    background: color-mix(in srgb, var(--color-yellow), #000 50%);
+    color: #fff;
+    transition: all 0.25s ease-in;
+  }
+}
+//button-height
+.b-h-46 {
+  min-height: 46px;
+}
+.b-h-56 {
+  min-height: 56px;
+}
+.b-h-66 {
+  min-height: 66px;
+}
+.b-w-417 {
+  max-width: 417px;
+}
+
+.primary-button--with-unset {
+  padding-left: 22px;
+  padding-right: 22px;
+  width: unset;
+}
