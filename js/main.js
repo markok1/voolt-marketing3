@@ -101,12 +101,11 @@ $(document).ready(function () {
         } else {
           $(".opened-box").find(".answer").css("max-height", "0px");
           $(".does-item").removeClass("opened-box");
-          var _this = $(this); // Store the current element reference
-          setTimeout(function () {
-            _this.addClass("opened-box");
-            var heightinside = _this.find(".answer p").height() + 50;
-            _this.find(".answer").css("max-height", heightinside + "px");
-          }, 250);
+          $(this).addClass("opened-box");
+          var heightinside = $(this).find(".answer p").height() + 50;
+          $(this)
+            .find(".answer")
+            .css("max-height", heightinside + "px");
         }
       });
     }
@@ -177,84 +176,43 @@ $(document).ready(function () {
     }
   });
 
+  function handleSliderNavigation(tableClass, direction) {
+    const $table = $(tableClass);
+    const $pager = $table.find(".pager");
+    const isNext = direction === "next";
+
+    if (!$pager.find(".active-dot").is(isNext ? ":last-child" : ":first-child")) {
+      const activeSelector = isNext ? "next" : "prev";
+
+      $table.find("th.active-in-slider").addClass("old-active-in").removeClass("active-in-slider")[activeSelector]().addClass("active-in-slider");
+      $table.find("th.old-active-in").removeClass("old-active-in");
+
+      $table.find("td.active-in-slider").addClass("old-active-in").removeClass("active-in-slider")[activeSelector]().addClass("active-in-slider");
+      $table.find("td.old-active-in").removeClass("old-active-in");
+
+      $pager.find(".active-dot").addClass("old-dot-active").removeClass("active-dot")[activeSelector]().addClass("active-dot");
+      $pager.find(".old-dot-active").removeClass("old-dot-active");
+    }
+  }
+
   $(".table-w-slider .pager .arrow-next").click(function (e) {
     e.preventDefault();
-    if (!$(".table-w-slider .pager .active-dot").is(":last-child")) {
-      $(".table-w-slider th.active-in-slider").addClass("old-active-in");
-      $(".table-w-slider th.old-active-in").next().addClass("active-in-slider");
-      $(".table-w-slider th.old-active-in").removeClass("active-in-slider");
-      $(".table-w-slider th.old-active-in").removeClass("old-active-in");
-
-      $(".table-w-slider td.active-in-slider").addClass("old-active-in");
-      $(".table-w-slider td.old-active-in").next().addClass("active-in-slider");
-      $(".table-w-slider td.old-active-in").removeClass("active-in-slider");
-      $(".table-w-slider td.old-active-in").removeClass("old-active-in");
-
-      $(".table-w-slider .pager .active-dot").addClass("old-dot-active");
-      $(".table-w-slider .pager .active-dot").next().addClass("active-dot");
-      $(".table-w-slider .pager .old-dot-active").removeClass("active-dot");
-      $(".table-w-slider .pager .old-dot-active").removeClass("old-dot-active");
-    }
+    handleSliderNavigation(".table-w-slider", "next");
   });
+
   $(".table-w-slider .pager .arrow-prev").click(function (e) {
     e.preventDefault();
-    if (!$(".table-w-slider .pager .active-dot").is(":first-child")) {
-      $(".table-w-slider th.active-in-slider").addClass("old-active-in");
-      $(".table-w-slider th.old-active-in").prev().addClass("active-in-slider");
-      $(".table-w-slider th.old-active-in").removeClass("active-in-slider");
-      $(".table-w-slider th.old-active-in").removeClass("old-active-in");
-
-      $(".table-w-slider td.active-in-slider").addClass("old-active-in");
-      $(".table-w-slider td.old-active-in").prev().addClass("active-in-slider");
-      $(".table-w-slider td.old-active-in").removeClass("active-in-slider");
-      $(".table-w-slider td.old-active-in").removeClass("old-active-in");
-
-      $(".table-w-slider .pager .active-dot").addClass("old-dot-active");
-      $(".table-w-slider .pager .active-dot").prev().addClass("active-dot");
-      $(".table-w-slider .pager .old-dot-active").removeClass("active-dot");
-      $(".table-w-slider .pager .old-dot-active").removeClass("old-dot-active");
-    }
+    handleSliderNavigation(".table-w-slider", "prev");
   });
-
-  //table2
 
   $(".table-w-slider2 .pager .arrow-next").click(function (e) {
     e.preventDefault();
-    if (!$(".table-w-slider2 .pager .active-dot").is(":last-child")) {
-      $(".table-w-slider2 th.active-in-slider").addClass("old-active-in");
-      $(".table-w-slider2 th.old-active-in").next().addClass("active-in-slider");
-      $(".table-w-slider2 th.old-active-in").removeClass("active-in-slider");
-      $(".table-w-slider2 th.old-active-in").removeClass("old-active-in");
-
-      $(".table-w-slider2 td.active-in-slider").addClass("old-active-in");
-      $(".table-w-slider2 td.old-active-in").next().addClass("active-in-slider");
-      $(".table-w-slider2 td.old-active-in").removeClass("active-in-slider");
-      $(".table-w-slider2 td.old-active-in").removeClass("old-active-in");
-
-      $(".table-w-slider2 .pager .active-dot").addClass("old-dot-active");
-      $(".table-w-slider2 .pager .active-dot").next().addClass("active-dot");
-      $(".table-w-slider2 .pager .old-dot-active").removeClass("active-dot");
-      $(".table-w-slider2 .pager .old-dot-active").removeClass("old-dot-active");
-    }
+    handleSliderNavigation(".table-w-slider2", "next");
   });
+
   $(".table-w-slider2 .pager .arrow-prev").click(function (e) {
     e.preventDefault();
-    if (!$(".table-w-slider2 .pager .active-dot").is(":first-child")) {
-      $(".table-w-slider2 th.active-in-slider").addClass("old-active-in");
-      $(".table-w-slider2 th.old-active-in").prev().addClass("active-in-slider");
-      $(".table-w-slider2 th.old-active-in").removeClass("active-in-slider");
-      $(".table-w-slider2 th.old-active-in").removeClass("old-active-in");
-
-      $(".table-w-slider2 td.active-in-slider").addClass("old-active-in");
-      $(".table-w-slider2 td.old-active-in").prev().addClass("active-in-slider");
-      $(".table-w-slider2 td.old-active-in").removeClass("active-in-slider");
-      $(".table-w-slider2 td.old-active-in").removeClass("old-active-in");
-
-      $(".table-w-slider2 .pager .active-dot").addClass("old-dot-active");
-      $(".table-w-slider2 .pager .active-dot").prev().addClass("active-dot");
-      $(".table-w-slider2 .pager .old-dot-active").removeClass("active-dot");
-      $(".table-w-slider2 .pager .old-dot-active").removeClass("old-dot-active");
-    }
+    handleSliderNavigation(".table-w-slider2", "prev");
   });
 
   //Add UTMS to all links
