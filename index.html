@@ -20,11 +20,11 @@
     <meta name="description" content="Grow your service business with a perfectly built and managed website" />
     <title>Try Voolt</title>
     <link rel="icon" href="img/favicon.png" />
-    <script defer src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+    <script  src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
     <!-- slick slider start -->
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
 
-    <script defer type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script  type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     <!-- slick slider end -->
 
     <link rel="preload" href="img/hero-bg.webp" as="image" media="(min-width: 768px)"/>
@@ -1389,14 +1389,14 @@
       }
     </script> -->
 
-    <script defer src="js/main-minify.js"></script>
-    <script defer>
+    <script  src="js/main-minify.js"></script>
+    <script >
 document.addEventListener("DOMContentLoaded", function() {
     const mediaQueryList = window.matchMedia("(max-width: 768px)");
     const header = document.querySelector(".hero");
 
     if (header) {
-        console.log("Header element found:", header);
+        console.log("Hero element found:", header);
 
         function setBackground() {
             if (mediaQueryList.matches) {
@@ -1412,7 +1412,7 @@ document.addEventListener("DOMContentLoaded", function() {
         // Add a listener to update the background when the screen size changes
         mediaQueryList.addListener(setBackground);
     } else {
-        console.error("Header element not found");
+        console.error("Hero element not found");
     }
 });
     </script>
