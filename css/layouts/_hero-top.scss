@@ -1,6 +1,7 @@
 .hero-top {
   background: var(--gradiente-azul);
   padding: 20px 0px;
+  max-height: 170px;
   .wrapper {
     display: flex;
     justify-content: center;
@@ -56,6 +57,7 @@
 @media screen and (max-width: 768px) {
   .hero-top {
     padding: 10px 0px 20px 0px;
+    max-height: 92px;
     .checkmark {
       max-width: 30px;
       max-height: 30px;

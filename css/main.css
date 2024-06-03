@@ -614,8 +614,8 @@ h2 {
 .navbar {
   padding: 13px 0px;
 }
-.navbar .logo svg {
-  width: 123px;
+.navbar .logo img {
+  max-width: 146px;
 }
 
 @media screen and (max-width: 768px) {
@@ -628,7 +628,7 @@ h2 {
   .navbar {
     padding: 11px 0px;
   }
-  .navbar .logo {
+  .navbar .logo img {
     max-width: 90px;
   }
   .navbar .primary-button {
@@ -640,6 +640,7 @@ h2 {
 .hero-top {
   background: var(--gradiente-azul);
   padding: 20px 0px;
+  max-height: 170px;
 }
 .hero-top .wrapper {
   display: flex;
@@ -697,6 +698,7 @@ h2 {
 @media screen and (max-width: 768px) {
   .hero-top {
     padding: 10px 0px 20px 0px;
+    max-height: 92px;
   }
   .hero-top .checkmark {
     max-width: 30px;
@@ -735,6 +737,7 @@ h2 {
   padding: 58px 0px;
   background-color: #041b2f;
   position: relative;
+  overflow: hidden;
 }
 .hero::after {
   content: "";
@@ -795,12 +798,15 @@ h2 {
 .hero-left .google-ads-span {
   font-weight: 400;
 }
+.hero-left .google-ads-span img {
+  max-width: 53px;
+}
 .hero-left .meta-span {
   font-family: "Carmen Sans", sans-serif;
   font-weight: 700;
 }
 .hero-left .meta-span img {
-  padding-top: 10px;
+  max-width: 70px;
 }
 .hero-left .subtitle {
   color: #f7f7ff;
@@ -834,6 +840,9 @@ h2 {
   max-width: calc(50% - 66px);
   margin-left: auto;
 }
+.hero-right picture img {
+  max-width: 590px;
+}
 
 @media screen and (max-width: 1024px) {
   .hero {
@@ -844,6 +853,12 @@ h2 {
   }
   .hero-left h1 span {
     font-size: 33px;
+  }
+  .hero-left .google-ads-span img {
+    max-width: 30px;
+  }
+  .hero-left .meta-span img {
+    max-width: 30px;
   }
   .hero-left .subtitle {
     font-size: 18px;
@@ -884,6 +899,9 @@ h2 {
   .hero-right {
     max-width: 390px;
     margin-left: unset;
+  }
+  .hero-right picture img {
+    max-width: 300px;
   }
 }
 .under-hero {

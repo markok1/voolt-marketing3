@@ -1,9 +1,10 @@
 .navbar {
   padding: 13px 0px;
   .logo {
-    svg {
-      width: 123px;
+    img{
+      max-width: 146px;
     }
+   
   }
 }
 @media screen and (max-width: 768px) {
@@ -19,7 +20,10 @@
   .navbar {
     padding: 11px 0px;
     .logo {
-      max-width: 90px;
+      img{
+        max-width: 90px;
+      }
+      
     }
     .primary-button {
       font-size: 12px;

@@ -3,6 +3,7 @@
   padding: 58px 0px;
   background-color: #041b2f;
   position: relative;
+  overflow: hidden;
   &::after {
     content: "";
     position: absolute;
@@ -58,12 +59,16 @@
   }
   .google-ads-span {
     font-weight: 400;
+    img{
+      max-width: 53px;
+    }
   }
   .meta-span {
     font-family: $carmensans;
     font-weight: 700;
     img {
-      padding-top: 10px;
+      max-width: 70px;
+   
     }
   }
   .subtitle {
@@ -96,6 +101,11 @@
 .hero-right {
   max-width: calc(50% - 66px);
   margin-left: auto;
+  picture{
+    img{
+      max-width: 590px;
+    }
+  }
 }
 
 @media screen and (max-width: 1024px) {
@@ -108,6 +118,12 @@
       font-size: 33px;
     }
   }
+  .hero-left .google-ads-span img {
+    max-width: 30px;
+}
+.hero-left .meta-span img {
+  max-width: 30px;
+}
   .hero-left .subtitle {
     font-size: 18px;
     font-style: normal;
@@ -152,5 +168,10 @@
   .hero-right {
     max-width: 390px;
     margin-left: unset;
+    picture{
+      img{
+        max-width: 300px;
+      }
+    }
   }
 }
