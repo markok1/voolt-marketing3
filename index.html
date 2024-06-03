@@ -22,7 +22,7 @@
     <link rel="icon" href="img/favicon.png" />
     <script defer src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
     <!-- slick slider start -->
-    <link defer rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
 
     <script defer type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     <!-- slick slider end -->
@@ -132,8 +132,12 @@
 
     <div class="hero">
       <div class="hero-background-img">
-        <img class="only-desktop" src="img/hero-bg.webp" alt="Google ads background" />
-        <img fetchpriority="high" class="only-phone" src="img/hero-bg-mobile.webp" alt="Google ads background" />
+        <picture>
+          <source type="image/webp" srcset="img/hero-bg.webp 1600w, img/hero-bg-mobile.webp 768w">
+          <img fetchpriority="high" src="img/hero-bg.webp" alt="Google ads background">
+        </picture>
+        <!-- <img class="only-desktop" src="img/hero-bg.webp" alt="Google ads background" />
+        <img fetchpriority="high" class="only-phone" src="img/hero-bg-mobile.webp" alt="Google ads background" /> -->
       </div>
       <div class="wrapper">
         <div class="content">
@@ -176,8 +180,12 @@
           </div>
 
           <div class="hero-right">
-            <img class="only-desktop" src="img/hero-img.webp" alt="Two phones showing services" />
-            <img fetchpriority="high" class="only-phone" src="img/hero-phones-mobile.webp" alt="Two phones showing services" />
+            <picture>
+              <source type="image/webp" srcset="img/hero-img.webp 1600w, img/hero-phones-mobile.webp 768w">
+              <img fetchpriority="high" src="img/hero-img.webp" alt="Two phones showing services">
+            </picture>
+            <!-- <img class="only-desktop" src="img/hero-img.webp" alt="Two phones showing services" />
+            <img fetchpriority="high" class="only-phone" src="img/hero-phones-mobile.webp" alt="Two phones showing services" /> -->
           </div>
         </div>
       </div>
@@ -1364,6 +1372,6 @@
         <a href="https://app.voolt.com/flow/01/1/"> <img loading="lazy" class="footer-logo" loading="lazy" src="img/footer.svg" alt="Voolt logo" /></a>
       </div>
     </footer>
-    <script defer src="js/main.js"></script>
+    <script defer src="js/main-minify.js"></script>
   </body>
 </html>
