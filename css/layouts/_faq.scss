@@ -75,6 +75,9 @@
         max-width: 640px;
         p {
           margin-bottom: 10px;
+          span{
+            font-weight: 600;
+          }
           &:last-child {
             margin-bottom: 0px;
           }

@@ -42,7 +42,7 @@ $(document).ready(function () {
     });
 
   rev.slick({
-    autoplay: true,
+    autoplay: false,
     autoplaySpeed: 2000,
     speed: 1000,
     dots: true,
@@ -60,7 +60,7 @@ $(document).ready(function () {
     slidesToShow: 1,
     slidesToScroll: 1,
     centerPadding: "0",
-    swipe: true,
+    swipe: false,
     responsive: [
       {
         breakpoint: 768,
@@ -110,6 +110,23 @@ $(document).ready(function () {
       });
     }
   })(jQuery);
+
+
+
+  //scroll up on mobile
+  if (window.matchMedia('(max-width: 768px)').matches) {
+    const scrollToBtn = $('.does-item');
+    const scrollToEl = $('.does-left');
+    scrollToBtn.click(() => {
+      $('html').animate(
+        {
+          scrollTop: scrollToEl.offset().top,
+        },
+        700 //speed
+      );
+    
+    });
+}
 
   //video
   const $thumbnail = $("#thumbnail");
