@@ -27,8 +27,10 @@
     <script defer type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     <!-- slick slider end -->
 
-    <link rel="preload" href="img/hero-bg-mobile.webp" as="image" />
-    <link rel="preload" href="img/hero-phones-mobile.webp" as="image" />
+    <link rel="preload" href="img/hero-bg.webp" as="image" media="(min-width: 768px)"/>
+    <link rel="preload" href="img/hero-bg-mobile.webp" as="image" media="(max-width: 768px)"/>
+    <link rel="preload" href="img/hero-img.webp" as="image" media="(min-width: 768px)"/>
+    <link rel="preload" href="img/hero-phones-mobile.webp" as="image" media="(max-width: 768px)"/>
 
     <link rel="stylesheet" href="css/main.css" />
 
@@ -1373,6 +1375,46 @@
         <a href="https://app.voolt.com/flow/01/1/"> <img loading="lazy" class="footer-logo" loading="lazy" src="img/footer.svg" alt="Voolt logo" /></a>
       </div>
     </footer>
+
+    <!-- <script>
+      const mediaQueryList = window.matchMedia("(max-width: 768px)");
+      const header = document.querySelector("header");
+  
+      if (mediaQueryList.matches) {
+        header.style.backgroundImage = "url(img/hero-bg-mobile.webp)";
+        header.style.backgroundImage = "url(img/hero-phones-mobile.webp)";
+      } else {
+        header.style.backgroundImage = "url(img/hero-bg.webp)";
+        header.style.backgroundImage = "url(img/hero-phones-mobile.webp)";
+      }
+    </script> -->
+
     <script defer src="js/main-minify.js"></script>
+    <script defer>
+document.addEventListener("DOMContentLoaded", function() {
+    const mediaQueryList = window.matchMedia("(max-width: 768px)");
+    const header = document.querySelector(".hero");
+
+    if (header) {
+        console.log("Header element found:", header);
+
+        function setBackground() {
+            if (mediaQueryList.matches) {
+                header.style.backgroundImage = "url('img/hero-bg-mobile.webp'), url('img/hero-phones-mobile.webp')";
+            } else {
+                header.style.backgroundImage = "url('img/hero-bg.webp'), url('img/hero-phones-mobile.webp')";
+            }
+        }
+
+        // Set the initial background
+        setBackground();
+
+        // Add a listener to update the background when the screen size changes
+        mediaQueryList.addListener(setBackground);
+    } else {
+        console.error("Header element not found");
+    }
+});
+    </script>
   </body>
 </html>
