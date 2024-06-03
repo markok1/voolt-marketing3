@@ -901,7 +901,7 @@ h2 {
     margin-left: unset;
   }
   .hero-right picture img {
-    max-width: 300px;
+    max-width: 290px;
   }
 }
 .under-hero {
@@ -1225,6 +1225,9 @@ h2 {
   }
   .slide-box .number {
     left: 10px;
+  }
+  .slide-box img {
+    max-width: 297px;
   }
 }
 @media screen and (max-width: 375px) {
