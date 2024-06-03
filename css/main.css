@@ -899,7 +899,8 @@ h2 {
     margin-bottom: 15px;
   }
   .hero-right {
-    max-width: 390px;
+    max-width: unset;
+    width: 280px;
     margin-left: unset;
   }
   .hero-right picture img {
