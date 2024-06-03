@@ -642,6 +642,7 @@ h2 {
   background: var(--gradiente-azul);
   padding: 20px 0px;
   max-height: 170px;
+  overflow: hidden;
 }
 .hero-top .wrapper {
   display: flex;
