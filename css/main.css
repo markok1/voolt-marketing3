@@ -901,7 +901,7 @@ h2 {
     margin-left: unset;
   }
   .hero-right picture img {
-    max-width: 290px;
+    width: 280px;
   }
 }
 .under-hero {
