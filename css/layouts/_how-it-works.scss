@@ -1,5 +1,8 @@
 .how-it-works {
   padding: 80px 0px;
+  .wrapper {
+    max-width: 1750px;
+  }
   h2 {
     color: #202122;
     text-align: center;
@@ -18,6 +21,20 @@
     font-weight: 400;
     line-height: normal;
   }
+  .slick-arrow {
+    background: transparent;
+    border: 0px;
+    position: absolute;
+    top: calc(50% - 54px);
+  }
+  .pull-left {
+    left: 0px;
+    z-index: 2;
+  }
+  .pull-right {
+    right: 0px;
+    z-index: 2;
+  }
 }
 .slide-box {
   position: relative;
@@ -25,7 +42,7 @@
   .number {
     position: absolute;
     top: 0px;
-    left: 0px;
+    left: 25px;
     background-color: #058beb;
     width: 50px;
     height: 50px;
@@ -42,24 +59,28 @@
     line-height: normal;
   }
   .bottom-message {
-    border-radius: 3px;
+    border-radius: 8.182px;
     background: #f4f5fb;
-    padding: 16px;
-    // max-width: 208px;
+    box-shadow: 0px -179.998px 49.756px 0px rgba(0, 0, 0, 0), 0px -115.609px 46.829px 0px rgba(0, 0, 0, 0.01), 0px -64.39px 39.512px 0px rgba(0, 0, 0, 0.05), 0px -29.268px 29.268px 0px rgba(0, 0, 0, 0.09), 0px -7.317px 16.097px 0px rgba(0, 0, 0, 0.1);
+    padding: 40px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
 
     position: absolute;
-    left: 50%;
-    bottom: -50px;
-    transform: translateX(-50%);
+    bottom: 20px;
 
     transition: all 0.25s ease-in;
     p {
       color: #202122;
       font-family: $genralsans;
-      font-size: 15.075px;
+      font-size: 102px;
       font-style: normal;
       font-weight: 400;
       line-height: normal;
+      max-width: 1148px;
       span {
         color: #058beb;
         font-weight: 700;
@@ -71,9 +92,12 @@
 .how-marketing-holder {
   width: 100%;
   .slide-box {
-    max-width: 590px;
-    max-height: 330px;
+    max-width: 1300px;
+    max-height: 840px;
     margin: auto;
+    img {
+      margin: auto;
+    }
   }
   .slick-slider {
     margin-left: -12%;
@@ -82,7 +106,9 @@
 
   .slick-list {
     padding-top: 40px !important;
-    height: 455px;
+    padding-left: 40px !important;
+    padding-right: 40px !important;
+    height: 890px;
     max-width: 100%;
     width: 100%;
     margin: auto;
@@ -118,17 +144,27 @@
     display: block;
     transform: translate3d(0, 0, 0);
     z-index: 2;
+    .slide-box {
+      .number {
+        width: 90px;
+        height: 90px;
+        font-size: 60px;
+      }
+      .bottom-message {
+        opacity: 1;
+      }
+    }
   }
 
   .slick-snext {
     opacity: 0.4;
-    transform: translate3d(30%, 0, -20px);
+    transform: translate3d(47%, 0, -80px);
     z-index: 1;
   }
 
   .slick-sprev {
     opacity: 0.4;
-    transform: translate3d(-30%, 0, -20px);
+    transform: translate3d(-47%, 0, -80px);
   }
 }
 
@@ -154,7 +190,27 @@
     }
   }
 }
-
+@media screen and (max-width: 1440px) {
+  .how-marketing-holder .slide-box {
+    max-width: 1000px;
+  }
+  .slide-box .bottom-message p {
+    font-size: 60px;
+  }
+  .how-marketing-holder .slick-list {
+    height: auto;
+  }
+  .how-marketing-holder .slick-current .slide-box .number {
+    width: 75px;
+    height: 75px;
+    font-size: 40px;
+  }
+  .slide-box .number {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+  }
+}
 @media screen and (max-width: 1024px) {
   .how-it-works {
     h2 {
@@ -166,18 +222,26 @@
   }
   .how-marketing-holder {
     .slick-list {
-      padding: 40px 40px 30px 40px !important;
+      padding: 40px 40px 00px 40px !important;
       height: unset;
     }
     .slide-box {
       max-width: 476px;
       .bottom-message {
-        bottom: -5px;
+        bottom: 50px;
         p {
           font-size: 14px;
         }
       }
     }
+  }
+  .slide-box .bottom-message {
+    padding: 18px;
+  }
+  .how-marketing-holder .slick-current .slide-box .number {
+    width: 50px;
+    height: 50px;
+    font-size: 28px;
   }
 }
 
@@ -195,16 +259,16 @@
     opacity: 0;
   }
   .how-marketing-holder .slide-box .bottom-message {
-    max-width: 190px;
     width: 100%;
     bottom: 55px;
-  }
-  .how-marketing-holder .slide-box .big-message {
-    max-width: 240px;
+    p {
+      font-size: 28px;
+      text-align: center;
+    }
   }
 
   .how-marketing-holder .slick-list {
-    padding: 20px 0px 0px 0px !important;
+    padding: 20px 20px 0px 20px !important;
   }
   .how-marketing-holder .slick-dots {
     position: absolute;
@@ -226,10 +290,17 @@
   .slide-box .number {
     left: 10px;
   }
-  .slide-box{
-    img{
+  .slide-box {
+    img {
       max-width: 297px;
+      width: 100%;
     }
+  }
+  .how-it-works .pull-left {
+    left: -15px;
+  }
+  .how-it-works .pull-right {
+    right: -15px;
   }
 }
 @media screen and (max-width: 375px) {
@@ -238,5 +309,10 @@
   }
   .how-it-works .subtitle {
     font-size: 22px;
+  }
+}
+@media screen and (max-width: 350px) {
+  .how-marketing-holder .slide-box .bottom-message p {
+    font-size: 24px;
   }
 }

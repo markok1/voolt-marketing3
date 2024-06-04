@@ -1,6 +1,9 @@
 .voolt-does {
   padding: 80px 0px;
   background: #f4f5fb;
+  .wrapper {
+    max-width: 1180px;
+  }
   h2 {
     color: #202122;
     text-align: center;
@@ -28,22 +31,11 @@
 .voolt-does-holder {
   display: flex;
   gap: 40px;
-  justify-content: center;
+  justify-content: flex-end;
   align-items: center;
+  position: relative;
 }
-.does-left {
-  max-width: 600px;
-  max-height: 475px;
-  .image-box {
-    max-height: 0px;
-    overflow: hidden;
-    transition: all 0.25s ease-in;
-  }
-  .does-active-img {
-    max-height: 475px;
-    transition: all 0.25s ease-in;
-  }
-}
+
 .does-right {
   max-width: 490px;
   width: 100%;
@@ -64,6 +56,16 @@
   }
 }
 .does-item {
+  .image-box {
+    display: none;
+    position: absolute;
+    left: 0px;
+    top: 50%;
+    right: calc(50% + 20px);
+    transform: translateY(-50%);
+  }
+}
+.inside-box {
   display: flex;
   flex-direction: column;
 
@@ -81,9 +83,7 @@
     justify-content: space-between;
   }
   .answer {
-    max-height: 0px;
-    overflow: hidden;
-    transition: all 0.25s ease-in;
+    display: none;
     p {
       padding-top: 6px;
     }
@@ -94,8 +94,10 @@
 }
 
 .opened-box {
-  background: #fcc72c;
-  transition: all 0.25s ease-in;
+  .inside-box {
+    background: #fcc72c;
+    transition: all 0.25s ease-in;
+  }
 }
 
 @media screen and (max-width: 1024px) {
@@ -106,10 +108,6 @@
     .subtitle {
       font-size: 30px;
     }
-  }
-  .does-left {
-    flex-shrink: 1;
-    flex-basis: 50%;
   }
   .does-right {
     flex-shrink: 1;
@@ -134,20 +132,32 @@
       margin-bottom: 20px;
     }
   }
+  .does-item {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    .image-box {
+      position: relative;
+      top: unset;
+      transform: unset;
+      right: unset;
+      left: unset;
+    }
+  }
 }
 @media screen and (max-width: 425px) {
-  .does-item {
+  .inside-box {
     padding: 12px 18px;
   }
-  .does-item .question {
+  .inside-box .question {
     font-size: 12px;
     line-height: 15.699px;
   }
-  .does-item .answer {
+  .inside-box .answer {
     font-size: 12px;
     line-height: 15.699px;
   }
-  .does-item .chevron {
+  .inside-box .chevron {
     max-width: 11px;
     max-height: 11px;
   }
