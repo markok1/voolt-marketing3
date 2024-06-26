@@ -1,0 +1,275 @@
+.start-ad {
+  background: #f4f5fb;
+  padding: 80px 0px;
+  .wrapper {
+    text-align: center;
+  }
+  font-family: $genralsans;
+  .subtitle {
+    color: #202122;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 36px; /* 90% */
+    margin-bottom: 40px;
+  }
+  h2 {
+    margin-bottom: 10px;
+    font-size: 52px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 70px;
+  }
+}
+.ads-block {
+  border-radius: 20px;
+  background: #041b2f;
+  max-width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 11px;
+  padding: 42px 29px 21px 10px;
+
+  max-width: 1133px;
+  margin: auto;
+}
+.ad-left-content {
+  display: flex;
+  flex-direction: column;
+  gap: 29px;
+  div {
+    display: flex;
+    align-items: center;
+    gap: 19px;
+    svg {
+      flex-shrink: 0;
+    }
+    p {
+      max-width: 283px;
+      color: #f7f7ff;
+      font-size: 22px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 30px;
+      text-align: left;
+      span {
+        font-weight: 600;
+      }
+    }
+  }
+}
+.ads-right {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 17px;
+}
+.ads-table-holder {
+  border-radius: 10px;
+  border: 2px solid rgba(247, 247, 255, 0.5);
+
+  padding: 14px 12px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 14px;
+
+  max-width: 681px;
+}
+
+.ad-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  max-width: 214px;
+  width: calc(33% - 5px);
+  min-height: 83px;
+  position: relative;
+
+  border-radius: 10px;
+  border: 2px solid #f7f7ff;
+  background: rgba(217, 217, 217, 0.4);
+}
+.ads-top .ad-box {
+  min-height: 52px;
+}
+.popular-box {
+  position: absolute;
+  top: -11px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 106px;
+  height: 21px;
+  border-radius: 20px;
+  background: #ffd20a;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: #202122;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 30px;
+}
+.most-popular {
+  border: 2px solid #ffd20a;
+}
+.ad-title {
+  color: #ffd20a;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+.ad-big {
+  color: #fff;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+.add-small {
+  color: #fff;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+
+.ads-footer {
+  color: #f7f7ff;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 20px;
+}
+.ads-pricing {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+.ads-top {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+.google-meta {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+}
+
+@media screen and (max-width: 1024px) {
+  .ad-left-content div p {
+    font-size: 16px;
+    line-height: 21.482px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .start-ad {
+    padding: 40px 0px;
+  }
+  .start-ad h2 {
+    font-size: 35px;
+    line-height: 40px;
+    margin-bottom: 15px;
+  }
+  .start-ad .subtitle {
+    font-size: 22px;
+    line-height: 28px;
+    margin-bottom: 20px;
+  }
+  .ads-block {
+    flex-direction: column;
+    padding: 37px 12px;
+    gap: 22px;
+  }
+  .ad-left-content {
+    gap: 21px;
+  }
+  .ad-title {
+    font-size: 18px;
+    line-height: normal;
+  }
+  .ad-big {
+    font-size: 18px;
+    line-height: normal;
+  }
+  .add-small {
+    font-size: 10px;
+    line-height: normal;
+  }
+  .google-meta img {
+    max-width: 31px;
+  }
+  .google-meta img:first-child {
+    max-width: 23px;
+  }
+  .ad-box {
+    min-height: 60px;
+  }
+  .ads-footer {
+    font-size: 14px;
+    line-height: 14.321px;
+  }
+  .ads-right {
+    gap: 21px;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .ad-left-content div p {
+    max-width: 241px;
+  }
+  .ad-left-content div svg {
+    max-width: 29px;
+  }
+  .ads-table-holder {
+    padding: 12px 6px;
+    gap: 10px;
+  }
+  .ads-top {
+    gap: 4px;
+  }
+  .ads-pricing {
+    gap: 4px;
+    justify-content: center;
+  }
+  .popular-box {
+    width: 71px;
+    height: 15px;
+    font-size: 8px;
+    line-height: 21.482px;
+  }
+  .google-meta {
+    gap: 5px;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .ad-title {
+    font-size: 16px;
+  }
+  .ad-big {
+    font-size: 16px;
+  }
+  .add-small {
+    font-size: 8px;
+  }
+  .start-ad h2 {
+    font-size: 28px;
+    line-height: 30px;
+  }
+  .start-ad .subtitle {
+    font-size: 18px;
+    line-height: 20px;
+  }
+}
