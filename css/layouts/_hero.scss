@@ -59,7 +59,7 @@
   }
   .google-ads-span {
     font-weight: 400;
-    img{
+    img {
       max-width: 53px;
     }
   }
@@ -68,7 +68,6 @@
     font-weight: 700;
     img {
       max-width: 70px;
-   
     }
   }
   .subtitle {
@@ -86,6 +85,7 @@
   display: flex;
   flex-direction: column;
   gap: 16px;
+  align-items: flex-start;
   p {
     color: #fff;
     font-family: $genralsans;
@@ -98,11 +98,26 @@
     gap: 4px;
   }
 }
+
+.buttons {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 2px;
+  p {
+    text-align: center;
+  }
+  .primary-button {
+    max-width: 417px;
+    width: 100%;
+    padding: 0px 40px;
+  }
+}
 .hero-right {
   max-width: calc(50% - 66px);
   margin-left: auto;
-  picture{
-    img{
+  picture {
+    img {
       max-width: 590px;
     }
   }
@@ -120,10 +135,10 @@
   }
   .hero-left .google-ads-span img {
     max-width: 30px;
-}
-.hero-left .meta-span img {
-  max-width: 30px;
-}
+  }
+  .hero-left .meta-span img {
+    max-width: 30px;
+  }
   .hero-left .subtitle {
     font-size: 18px;
     font-style: normal;
@@ -137,7 +152,7 @@
     }
     .primary-button {
       font-size: 19px;
-      max-width: 246px;
+      // max-width: 246px;
       border-radius: 7px;
     }
   }
@@ -167,13 +182,18 @@
   }
   .hero-right {
     max-width: unset;
-   width: 280px;
+    width: 280px;
     margin-left: unset;
-    picture{
-      img{
+    picture {
+      img {
         // max-width: 290px;
         width: 280px;
       }
     }
+  }
+}
+@media screen and (max-width: 375px) {
+  .hero-left .primary-button {
+    font-size: 17px;
   }
 }

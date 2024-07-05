@@ -27,6 +27,15 @@
     transition: all 0.25s ease-in;
   }
 }
+.primary-button--blue {
+  background: #058beb;
+  color: #f7f7ff;
+  &:hover {
+    background: color-mix(in srgb, #058beb, #000 50%);
+    color: #fff;
+  }
+}
+
 //button-height
 .b-h-46 {
   min-height: 46px;

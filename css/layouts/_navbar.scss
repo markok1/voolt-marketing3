@@ -1,13 +1,16 @@
 .navbar {
   padding: 13px 0px;
   .logo {
-    img{
+    img {
       max-width: 146px;
     }
-   
   }
 }
-@media screen and (max-width: 768px) {
+.nav-buttons {
+  display: flex;
+  gap: 10px;
+}
+@media screen and (max-width: 1024px) {
   .navbar {
     .primary-button {
       font-size: 15px;
@@ -15,20 +18,33 @@
     }
   }
 }
+@media screen and (max-width: 650px) {
+  .navbar {
+    .primary-button {
+      font-size: 12px;
+      min-height: 30px;
+      max-width: 177px;
+      border-radius: 4px;
+    }
+    .primary-button--with-unset {
+      padding-left: 15px;
+      padding-right: 15px;
+      width: unset;
+    }
+  }
+  .nav-buttons {
+    flex-direction: column;
+    gap: 5px;
+  }
+}
 
 @media screen and (max-width: 425px) {
   .navbar {
     padding: 11px 0px;
     .logo {
-      img{
+      img {
         max-width: 90px;
       }
-      
-    }
-    .primary-button {
-      font-size: 12px;
-      min-height: 30px;
-      max-width: 177px;
     }
   }
 }

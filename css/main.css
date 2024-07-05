@@ -257,6 +257,15 @@ h2 {
   transition: all 0.25s ease-in;
 }
 
+.primary-button--blue {
+  background: #058beb;
+  color: #f7f7ff;
+}
+.primary-button--blue:hover {
+  background: color-mix(in srgb, #058beb, #000 50%);
+  color: #fff;
+}
+
 .b-h-46 {
   min-height: 46px;
 }
@@ -619,10 +628,32 @@ h2 {
   max-width: 146px;
 }
 
-@media screen and (max-width: 768px) {
+.nav-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+@media screen and (max-width: 1024px) {
   .navbar .primary-button {
     font-size: 15px;
     font-weight: 500;
+  }
+}
+@media screen and (max-width: 650px) {
+  .navbar .primary-button {
+    font-size: 12px;
+    min-height: 30px;
+    max-width: 177px;
+    border-radius: 4px;
+  }
+  .navbar .primary-button--with-unset {
+    padding-left: 15px;
+    padding-right: 15px;
+    width: unset;
+  }
+  .nav-buttons {
+    flex-direction: column;
+    gap: 5px;
   }
 }
 @media screen and (max-width: 425px) {
@@ -631,11 +662,6 @@ h2 {
   }
   .navbar .logo img {
     max-width: 90px;
-  }
-  .navbar .primary-button {
-    font-size: 12px;
-    min-height: 30px;
-    max-width: 177px;
   }
 }
 .hero-top {
@@ -825,6 +851,7 @@ h2 {
   display: flex;
   flex-direction: column;
   gap: 16px;
+  align-items: flex-start;
 }
 .btnplace p {
   color: #fff;
@@ -836,6 +863,21 @@ h2 {
   display: flex;
   align-items: center;
   gap: 4px;
+}
+
+.buttons {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 2px;
+}
+.buttons p {
+  text-align: center;
+}
+.buttons .primary-button {
+  max-width: 417px;
+  width: 100%;
+  padding: 0px 40px;
 }
 
 .hero-right {
@@ -872,7 +914,6 @@ h2 {
   }
   .hero-left .primary-button {
     font-size: 19px;
-    max-width: 246px;
     border-radius: 7px;
   }
   .btnplace p {
@@ -905,6 +946,11 @@ h2 {
   }
   .hero-right picture img {
     width: 280px;
+  }
+}
+@media screen and (max-width: 375px) {
+  .hero-left .primary-button {
+    font-size: 17px;
   }
 }
 .under-hero {
