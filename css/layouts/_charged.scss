@@ -83,6 +83,12 @@
       font-size: 36px;
       line-height: normal;
     }
+    .primary-button {
+      font-size: 16px;
+      max-width: 216px;
+      min-height: 35px;
+      border-radius: 7px;
+    }
   }
 }
 @media screen and (max-width: 425px) {

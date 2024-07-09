@@ -20,6 +20,15 @@
     font-weight: 700;
     line-height: 70px;
   }
+  .btnplace {
+    align-items: center;
+    padding-top: 40px;
+    .primary-button {
+      max-width: 417px;
+      width: 100%;
+      padding: 10px 0px;
+    }
+  }
 }
 .ads-block {
   border-radius: 20px;
@@ -176,6 +185,12 @@
 @media screen and (max-width: 768px) {
   .start-ad {
     padding: 40px 0px;
+    .btnplace .primary-button {
+      font-size: 16px;
+      max-width: 216px;
+      min-height: 35px;
+      border-radius: 7px;
+    }
   }
   .start-ad h2 {
     font-size: 35px;
@@ -271,5 +286,10 @@
   .start-ad .subtitle {
     font-size: 18px;
     line-height: 20px;
+  }
+  .btnplace {
+    .primary-button {
+      font-size: 20px;
+    }
   }
 }

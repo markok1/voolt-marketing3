@@ -278,6 +278,11 @@ h2 {
   min-height: 66px;
 }
 
+.b-w-340 {
+  max-width: 340px;
+  width: 100%;
+}
+
 .b-w-417 {
   max-width: 417px;
 }
@@ -286,6 +291,11 @@ h2 {
   padding-left: 22px;
   padding-right: 22px;
   width: unset;
+}
+
+.align-button {
+  align-items: center !important;
+  padding-top: 40px;
 }
 
 .table {
@@ -761,8 +771,6 @@ h2 {
   }
 }
 .hero {
-  min-height: 625px;
-  padding: 58px 0px;
   background-color: #041b2f;
   position: relative;
   overflow: hidden;
@@ -773,6 +781,12 @@ h2 {
   inset: 0;
   z-index: 1;
   background-image: linear-gradient(90deg, #041b2f 50%, rgba(4, 27, 47, 0) 400%);
+}
+.hero .wrapper {
+  min-height: 625px;
+  padding: 58px 20px;
+  position: relative;
+  z-index: 2;
 }
 
 .hero-background-img {
@@ -796,15 +810,12 @@ h2 {
 }
 
 .content {
-  position: relative;
-  z-index: 2;
   display: flex;
   align-items: center;
 }
 
 .hero-left {
   max-width: calc(50% - 10px);
-  margin-left: auto;
 }
 .hero-left h1 {
   color: #f7f7ff;
@@ -881,15 +892,13 @@ h2 {
 }
 
 .hero-right {
-  max-width: calc(50% - 66px);
-  margin-left: auto;
+  max-width: 815px;
+  position: absolute;
+  right: 20px;
+  bottom: -10px;
 }
-.hero-right picture img {
-  max-width: 590px;
-}
-
-@media screen and (max-width: 1024px) {
-  .hero {
+@media screen and (max-width: 1200px) {
+  .hero .wrapper {
     min-height: unset;
   }
   .hero-left h1 {
@@ -916,13 +925,23 @@ h2 {
     font-size: 19px;
     border-radius: 7px;
   }
+  .hero-right {
+    max-width: calc(50% - 10px);
+  }
   .btnplace p {
     font-size: 16px;
   }
 }
 @media screen and (max-width: 768px) {
-  .hero {
-    padding: 40px 0px;
+  .hero .wrapper {
+    padding: 40px 20px 0px 20px;
+  }
+  .hero .wrapper .primary-button {
+    font-size: 16px;
+    max-width: 246px;
+    min-height: 35px;
+    border-radius: 7px;
+    padding: 0px;
   }
   .content {
     flex-direction: column;
@@ -940,12 +959,14 @@ h2 {
     margin-bottom: 15px;
   }
   .hero-right {
-    max-width: unset;
-    width: 280px;
+    max-width: 600px;
+    width: 100%;
     margin-left: unset;
+    position: relative;
+    right: 0px;
   }
   .hero-right picture img {
-    width: 280px;
+    width: 100%;
   }
 }
 @media screen and (max-width: 375px) {
@@ -1091,6 +1112,15 @@ h2 {
   font-style: normal;
   font-weight: 700;
   line-height: 70px;
+}
+.start-ad .btnplace {
+  align-items: center;
+  padding-top: 40px;
+}
+.start-ad .btnplace .primary-button {
+  max-width: 417px;
+  width: 100%;
+  padding: 10px 0px;
 }
 
 .ads-block {
@@ -1253,6 +1283,12 @@ h2 {
   .start-ad {
     padding: 40px 0px;
   }
+  .start-ad .btnplace .primary-button {
+    font-size: 16px;
+    max-width: 216px;
+    min-height: 35px;
+    border-radius: 7px;
+  }
   .start-ad h2 {
     font-size: 35px;
     line-height: 40px;
@@ -1345,6 +1381,9 @@ h2 {
   .start-ad .subtitle {
     font-size: 18px;
     line-height: 20px;
+  }
+  .btnplace .primary-button {
+    font-size: 20px;
   }
 }
 .how-it-works {
@@ -1614,6 +1653,12 @@ h2 {
   .how-it-works .subtitle {
     font-size: 24px;
   }
+  .how-it-works .primary-button {
+    font-size: 16px;
+    max-width: 216px;
+    min-height: 35px;
+    border-radius: 7px;
+  }
   .slide-box .number {
     left: 10px;
   }
@@ -1749,6 +1794,12 @@ h2 {
   }
 }
 @media screen and (max-width: 768px) {
+  .voolt-does .primary-button {
+    font-size: 16px;
+    max-width: 216px;
+    min-height: 35px;
+    border-radius: 7px;
+  }
   .voolt-does-holder {
     flex-direction: column;
     gap: 30px;
@@ -1889,6 +1940,12 @@ h2 {
     font-size: 36px;
     line-height: normal;
   }
+  .charged .primary-button {
+    font-size: 16px;
+    max-width: 216px;
+    min-height: 35px;
+    border-radius: 7px;
+  }
 }
 @media screen and (max-width: 425px) {
   .gif-holder {
@@ -1923,6 +1980,10 @@ h2 {
   top: 50%;
   transform: translateY(-50%);
   max-width: calc(50% - 33px);
+  max-height: 610px;
+}
+.directly-content .images img {
+  height: 100%;
 }
 
 @media screen and (max-width: 1440px) {

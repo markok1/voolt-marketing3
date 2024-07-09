@@ -1,6 +1,4 @@
 .hero {
-  min-height: 625px;
-  padding: 58px 0px;
   background-color: #041b2f;
   position: relative;
   overflow: hidden;
@@ -10,6 +8,12 @@
     inset: 0;
     z-index: 1;
     background-image: linear-gradient(90deg, #041b2f 50%, rgba(4, 27, 47, 0) 400%);
+  }
+  .wrapper {
+    min-height: 625px;
+    padding: 58px 20px;
+    position: relative;
+    z-index: 2;
   }
 }
 .hero-background-img {
@@ -32,15 +36,13 @@
 }
 
 .content {
-  position: relative;
-  z-index: 2;
   display: flex;
   align-items: center;
 }
 
 .hero-left {
   max-width: calc(50% - 10px);
-  margin-left: auto;
+  // margin-left: auto;
   h1 {
     color: #f7f7ff;
     display: inline-block;
@@ -114,17 +116,21 @@
   }
 }
 .hero-right {
-  max-width: calc(50% - 66px);
-  margin-left: auto;
+  // max-width: calc(50% - 66px);
+  // margin-left: auto;
+  max-width: 815px;
+  position: absolute;
+  right: 20px;
+  bottom: -10px;
   picture {
-    img {
-      max-width: 590px;
-    }
+    // img {
+    //   max-width: 590px;
+    // }
   }
 }
 
-@media screen and (max-width: 1024px) {
-  .hero {
+@media screen and (max-width: 1200px) {
+  .hero .wrapper {
     min-height: unset;
   }
   .hero-left h1 {
@@ -156,14 +162,24 @@
       border-radius: 7px;
     }
   }
+  .hero-right {
+    max-width: calc(50% - 10px);
+  }
   .btnplace p {
     font-size: 16px;
   }
 }
 
 @media screen and (max-width: 768px) {
-  .hero {
-    padding: 40px 0px;
+  .hero .wrapper {
+    padding: 40px 20px 0px 20px;
+    .primary-button {
+      font-size: 16px;
+      max-width: 246px;
+      min-height: 35px;
+      border-radius: 7px;
+      padding: 0px;
+    }
   }
   .content {
     flex-direction: column;
@@ -181,13 +197,14 @@
     }
   }
   .hero-right {
-    max-width: unset;
-    width: 280px;
+    max-width: 600px;
+    width: 100%;
     margin-left: unset;
+    position: relative;
+    right: 0px;
     picture {
       img {
-        // max-width: 290px;
-        width: 280px;
+        width: 100%;
       }
     }
   }

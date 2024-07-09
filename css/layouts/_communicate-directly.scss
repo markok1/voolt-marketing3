@@ -22,6 +22,10 @@
     top: 50%;
     transform: translateY(-50%);
     max-width: calc(50% - 33px);
+    max-height: 610px;
+    img {
+      height: 100%;
+    }
   }
 }
 

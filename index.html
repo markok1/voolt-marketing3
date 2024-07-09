@@ -24,7 +24,7 @@
     <link rel="preload" href="img/hero-bg.webp" as="image" media="(min-width: 768px)" />
     <link rel="preload" href="img/hero-bg-mobile.webp" as="image" media="(max-width: 768px)" />
     <link rel="preload" href="img/hero-img.webp" as="image" media="(min-width: 768px)" />
-    <link rel="preload" href="img/hero-phones-mobile.webp" as="image" media="(max-width: 768px)" />
+    <link rel="preload" href="img/hero-img-mobile.webp" as="image" media="(max-width: 768px)" />
 
     <link rel="stylesheet" href="css/main.css" />
 
@@ -49,7 +49,6 @@
           </a>
           <div class="nav-buttons">
             <a class="primary-button b-h-46 primary-button--with-unset" href="https://app.voolt.com/flow/01/1/">Start Generating Leads</a>
-            <a class="primary-button primary-button--blue b-h-46 primary-button--with-unset stop-redirect" href="https://meetings.hubspot.com/tgerbe"> Book an appointment</a>
           </div>
         </div>
       </div>
@@ -163,10 +162,8 @@
               Directly to your business.
             </p>
             <div class="btnplace">
-              <div class="buttons">
-                <a class="primary-button b-h-46" href="https://app.voolt.com/flow/01/1/">Start Generating Leads</a>
-                <p>or</p>
-                <a class="primary-button primary-button--blue b-h-46 stop-redirect" href="https://meetings.hubspot.com/tgerbe">Questions? Book A Demo</a>
+              <div class="buttons b-w-340">
+                <a class="primary-button b-h-46 b-w-375" href="https://app.voolt.com/flow/01/1/">Start Generating Leads</a>
               </div>
 
               <p>
@@ -190,7 +187,7 @@
 
           <div class="hero-right">
             <picture>
-              <source type="image/webp" srcset="img/hero-img.webp 1600w, img/hero-phones-mobile.webp 768w" />
+              <source type="image/webp" srcset="img/hero-img.webp 1600w, img/hero-img-mobile.webp 768w" />
               <img fetchpriority="high" src="img/hero-img.webp" alt="Two phones showing services" />
             </picture>
             <!-- <img class="only-desktop" src="img/hero-img.webp" alt="Two phones showing services" />
@@ -309,6 +306,9 @@
               </div>
             </div>
           </div>
+        </div>
+        <div class="btnplace align-button">
+          <a class="primary-button b-h-66 b-w-417" href="https://app.voolt.com/flow/01/1/">Start Generating Leads</a>
         </div>
       </div>
     </div>
@@ -479,6 +479,9 @@
             <p class="ads-footer">*No Monthly Payments. No Contracts.</p>
           </div>
         </div>
+        <div class="btnplace">
+          <a class="primary-button primary-button--blue b-h-46 primary-button--with-unset stop-redirect" href="https://meetings.hubspot.com/tgerbe">Questions? Book A Demo</a>
+        </div>
       </div>
     </div>
 
@@ -592,6 +595,9 @@
             </div>
           </div>
         </div>
+        <div class="btnplace align-button">
+          <a class="primary-button b-h-66 b-w-417" href="https://app.voolt.com/flow/01/1/">Start Generating Leads</a>
+        </div>
       </div>
     </section>
 
@@ -632,6 +638,9 @@
             </div>
             <img loading="lazy" src="img/gif-3.gif" alt="Potential customer gif" />
           </div>
+        </div>
+        <div class="btnplace align-button">
+          <a class="primary-button b-h-66 b-w-417" href="https://app.voolt.com/flow/01/1/">Start Generating Leads</a>
         </div>
       </div>
     </section>
@@ -1560,7 +1569,7 @@
             if (mediaQueryList.matches) {
               header.style.backgroundImage = "url('img/hero-bg-mobile.webp'), url('img/hero-phones-mobile.webp')";
             } else {
-              header.style.backgroundImage = "url('img/hero-bg.webp'), url('img/hero-phones-mobile.webp')";
+              header.style.backgroundImage = "url('img/hero-bg.webp'), url('img/hero-img.webp')";
             }
           }
 

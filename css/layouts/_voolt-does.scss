@@ -115,6 +115,14 @@
   }
 }
 @media screen and (max-width: 768px) {
+  .voolt-does {
+    .primary-button {
+      font-size: 16px;
+      max-width: 216px;
+      min-height: 35px;
+      border-radius: 7px;
+    }
+  }
   .voolt-does-holder {
     flex-direction: column;
     gap: 30px;

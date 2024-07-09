@@ -46,6 +46,10 @@
 .b-h-66 {
   min-height: 66px;
 }
+.b-w-340 {
+  max-width: 340px;
+  width: 100%;
+}
 .b-w-417 {
   max-width: 417px;
 }
@@ -54,4 +58,9 @@
   padding-left: 22px;
   padding-right: 22px;
   width: unset;
+}
+
+.align-button {
+  align-items: center !important;
+  padding-top: 40px;
 }
